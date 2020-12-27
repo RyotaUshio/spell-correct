@@ -1,0 +1,1 @@
+http://www.aoky.net/articles/peter_norvig/spell-correct.htm
