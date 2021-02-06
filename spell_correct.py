@@ -37,7 +37,8 @@ def known(words: list) -> set:
     """wordsに含まれる語のうち、既知のものを抽出する"""
     return set(w for w in words if w in NWORDS)
 
-def correct(word: str):
+def correct(word: str) -> str:
+    word = word.lower()
     candidates = known([word]) or known(edits1(word)) or known_edits2(word) or {word}
     result = max(candidates, key=lambda w: NWORDS[w])
     if result != word:
